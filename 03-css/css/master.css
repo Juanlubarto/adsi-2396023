@@ -5,7 +5,7 @@ html{
 }
 
 body {
-    background: url(../images/bg.jpg) no-repeat center;
+    background: url(../img/bg.jpg) no-repeat center;
     background-size:cover;
     font-family: 'Poppins', sans-serif;
     font-weight: 200;
