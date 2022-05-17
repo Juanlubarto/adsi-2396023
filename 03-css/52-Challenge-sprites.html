@@ -11,15 +11,18 @@
             background-size: cover;
             background-attachment: fixed;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             
         }
         figure#web.sprites {
             background: url(img/spriteweb.png) no-repeat;
             background-position: -22px -430px;
-            border: 20px;
+            border: 20px;   
             height: 120px;
             width: 180px;
-            margin: 0px auto;
+            margin: auto;
 
         }
         div.buttons {
@@ -30,6 +33,7 @@
 
         }
         div.buttons button{
+            border: none;
             text-align: center;
             border-bottom: 7px solid white;
             padding: 12px 18px;
@@ -40,6 +44,13 @@
             margin: 8px ;
             color: white;
         }
+
+        div.buttons button:hover{
+            background-color: #0f2b1c;
+            border-bottom: 7px solid yellow;
+            
+        }
+
         div.img {
             height: 300px;
             width: 900px;
@@ -57,34 +68,110 @@
             width: 250px ;
             margin: 0% auto;
             margin-top: 40px;
-
+            border: 2px solid white;
             
         }
-        div.img div.img2 {
-            background: url(img/spriteweb.png);
-            background-position: -510px -7px;
-            height: 200px; ;
-            width: 250px ;
-            margin: 0% auto;
-            margin-top: 40px;
-
-            
-        }
-        div.img div.img3 {
-            background: url(img/spriteweb.png);
-            background-position: -510px -7px;
-            height: 200px; ;
-            width: 250px ;
-            margin: 0% auto;
-            margin-top: 40px;
-
-            
-        }
+        
         div.text {
             font-family: sans-serif;
             font-size: 40px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.658);
+            background-color: rgba(255, 255, 255, 0.418);
+            color: #000000;
+        }
+
+        div.img1:hover > div.text {
+            background-color: rgba(255, 255, 255, 0.945);
+            
+        }
+        /* Container Main */
+
+        div.lorem {
+            width: 100%;
+            margin: auto;
+            
+            
+        }
+        
+        div.lorem div.container-sprites {
+            width: 80%;
+            margin: auto;
+            font-family: sans-serif;
+            font-size: 24px;
+            background-color: white;
+            display: flex;
+            border: 10px solid rgb(0, 63, 37) ;
+
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+        div.sprite1 {
+            display: flex;
+            justify-content: space-between;
+            
+            flex-wrap: nowrap;
+            height: 180px;
+            border-bottom: 10px solid rgb(0, 63, 37) ;
+            overflow: hidden;
+        }
+        .sprite1ignore{
+            border: none !important;
+        }
+        figure.sprite1-logo{
+            width: 600px;
+            background: url(img/spriteweb.png) no-repeat;
+            
+            background-position: -270px -480px;
+        }
+        figure.sprite1-lata{
+            width: 560px;
+            height: 100%;
+            
+            background: url(img/spriteweb.png) no-repeat;
+            background-position: -60px -230px;
+        }
+        .sprite1-text{
+            width: max-content;
+            font-size: 0.8em;
+            color: rgb(41, 41, 41);
+        }
+
+        .container-footer{
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+        }
+
+        .footer-img{
+            width: 100%;
+            margin: auto;
+        }
+        .footer-img1{
+            width: 260px;
+            height: 200px;
+            margin: 50px auto;
+            background: url(img/spriteweb.png) no-repeat;
+            background-position: -500px -430px;
+        }
+        .footer-nav ul{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+            padding: 10px;
+        }
+        .footer-nav ul li{
+
+            list-style: none;
+        }
+        .footer-nav ul li:hover{
+            border-bottom: 5px solid black;
+        }
+        .footer-nav ul li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
         }
         
         
@@ -109,12 +196,64 @@
         <div class="img1"> 
             <div class="text"> Sprite 1 </div>
         </div>
-        <div class="img2">
+        <div class="img1">
              <div class="text">Sprite 2</div>
             </div>
-        <div class="img3">
+        <div class="img1">
              <div class="text">Sprite 3</div>
             </div>
+    </div>
+
+    
+    <div class="lorem">
+        <div class="container-sprites">
+            
+            <div class="sprite1">
+                <figure class="sprite1-logo">
+
+                </figure>
+
+                <div class="sprite1-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sit eveniet quia necessitatibus dolores error tempora earum, optio accusantium repellat laudantium. Sint harum labore excepturi iste eveniet veritatis quos eligendi.
+                </div>
+
+                <figure class="sprite1-lata">
+
+                </figure>
+            </div>
+
+            <div class="sprite1 sprite1ignore" >
+                <figure class="sprite1-logo">
+
+                </figure>
+
+                <div class="sprite1-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sit eveniet quia necessitatibus dolores error tempora earum, optio accusantium repellat laudantium. Sint harum labore excepturi iste eveniet veritatis quos eligendi.
+                </div>
+
+                <figure class="sprite1-lata">
+
+                </figure>
+            </div>
+        </div>
+        
+    
+    </div>
+
+    <div class="container-footer">
+        <div class="footer-img">
+            <figure class="footer-img1"></figure>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                
+            </ul>
+        </div>
     </div>
 
 
