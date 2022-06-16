@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-Challenge Responsive</title>
+    <style>
+        body {
+            background-image: url(img/background.jpg);
+            align-content: center;
+        }
+    div.Berserklogo{
+        background: url(img/Berserk_anime_logo.png);
+        height: 216px;
+        width: 390px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+}
+div.Gustavo {
+    margin: 0 auto;
+    justify-content: center;
+    width: 1150px;
+    height: 300px;/*cambio*/
+    border: 2px solid black;
+    text-align: center;
+    display: flex; /*nuevo*/
+   
+}
+/** Nuevo, eliminado div.Gustavo div***/
+.colu {
+   width: calc(25% - 10px);/*nuevo*/
+   display: inline-block;  
+   position: relative;
+}
+div.guts1 {
+    background: url(img/Guts-goldenage.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+
+}
+div.guts2 {
+    background: url(img/black-swordsman.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+}
+div.guts3 {
+    background: url(img/Berserk-armor.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+}
+div.guts4 {
+    background: url(img/Elves-island.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+}
+/*nuevo
+.text{
+text-align: center;
+background-color: rgba(233, 52, 52, 0.705);
+width: 100%;
+color: #fff;
+position: absolute;
+bottom: 10px;
+padding: 4px;
+margin-bottom: 0px;
+} */
+section div.Gustavo h2 {
+    text-align: center;
+    line-height: 3.5rem;
+    background-color: rgba(226, 48, 48, 0.63);
+    margin-top: 260px;
+    transition: 0.5s all ease-in;
+    bottom: -20px;
+    width: 278px;
+    height: 40px;
+    
+
+}
+section div.Gustavo h2:hover {
+    background-color: red;
+    height: 70px;
+
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="Berserklogo"></div>
+        <section>
+    
+    <div class="Gustavo">
+                <div class="guts1 colu">
+                    <div class="text">
+                        <h2>Golden Age Arc</h2>
+                    </div>                
+                </div>
+
+                <div class="guts2 colu">
+                    <div class="text">
+                        <h2>Black Swordsman</h2>
+                    </div>     
+               
+                </div>
+
+                <div class="guts3 colu">
+                    <div class="text">
+                        <h2>Berserk Armor</h2>
+                    </div>     
+               
+                </div>
+
+                <div class="guts4 colu">
+                    <div class="text">
+                       <h2> Elves Island </h2>
+                    </div>     
+                </div>
+        </div>
+    </div>
+</section>
+    </main>
+</body>
+</html>
