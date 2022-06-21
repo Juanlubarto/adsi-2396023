@@ -6,30 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>17-Challenge Responsive</title>
     <style>
-        body {
-            background-image: url(img/background.jpg);
-            align-content: center;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+        
+        
     div.Berserklogo{
         background: url(img/Berserk_anime_logo.png);
+        background-position:center;
         height: 216px;
-        width: 390px;
+        width: 100%;
         background-repeat: no-repeat;
-        margin: 0 auto;
+        margin: auto;
 }
 div.Gustavo {
-    margin: 0 auto;
+    margin: auto;
     justify-content: center;
-    width: 1150px;
+    width: 90%;
     height: 300px;/*cambio*/
-    border: 2px solid black;
+    
     text-align: center;
     display: flex; /*nuevo*/
+   
+}
+
+div.Gustavo1 {
+    margin: auto;
+    justify-content: space-between;
+    width: 90%;
+    height: 300px;/*cambio*/
+    /*border: 2px solid black;*/
+    text-align: center;
+    display: flex; /*nuevo*/
+    padding-top:50px;
    
 }
 /** Nuevo, eliminado div.Gustavo div***/
 .colu {
    width: calc(25% - 10px);/*nuevo*/
+   display: inline-block;  
+   position: relative;
+}
+.colu1 {
+   width: calc(70% - 10px);/*nuevo*/
    display: inline-block;  
    position: relative;
 }
@@ -58,6 +75,26 @@ div.guts4 {
     background-size: cover;/*cambio*/
     margin: 0px 10px;
 }
+div.guts6 {
+    background: url(img/guts.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+
+}
+div.guts7 {
+    background: url(img/guts-joven.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+
+}
+div.guts-new {
+    
+    height: 300px;    
+    background-size: cover;/*cambio*/
+    margin: 0px 10px;
+}
 /*nuevo
 .text{
 text-align: center;
@@ -69,22 +106,62 @@ bottom: 10px;
 padding: 4px;
 margin-bottom: 0px;
 } */
+/*Nuevo Media Queries*/
+/**iPad resolucion 768x1024**/
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    div.Gustavo, div.Gustavo1 {
+        width: 90% !important; /*El important es para sobrescribir un estilo ya definido*/    
+        margin: auto; 
+        flex-wrap: wrap; /**El flex wrap wrap es para que cuando alcance el ancho maximop pase al siguiente renglon si no de define siempre va a mostrar los elementos en una sola linea*/    
+        height: 100% !important;
+    }
+    .colu, .colu1 {
+       width: 100% !important;    
+       height: 500px !important;      
+    }
+}
+/**Mobile resolucion menor a  600pxx**/
+@media only screen and (max-width: 599px){
+    div.Gustavo {
+        width: 90% !important; /*El important es para sobrescribir un estilo ya definido*/    
+        margin: auto; 
+        flex-wrap: wrap; /**El flex wrap wrap es para que cuando alcance el ancho maximop pase al siguiente renglon si no de define siempre va a mostrar los elementos en una sola linea*/ 
+        height: 100% !important;   
+    }
+    .colu, .colu1 {
+       width: 100% !important;   
+       height: 300px !important;    
+    }
+    div.Gustavo1 {
+        width: 90% !important; /*El important es para sobrescribir un estilo ya definido*/    
+        margin: auto; 
+        flex-wrap: wrap; /**El flex wrap wrap es para que cuando alcance el ancho maximop pase al siguiente renglon si no de define siempre va a mostrar los elementos en una sola linea*/    
+        height: 100% !important;
+    }
+}
 section div.Gustavo h2 {
     text-align: center;
     line-height: 3.5rem;
     background-color: rgba(226, 48, 48, 0.63);
-    margin-top: 260px;
-    transition: 0.5s all ease-in;
-    bottom: -20px;
-    width: 278px;
+    /*margin-top: 260px;*/   
+    width: 100%;
     height: 40px;
-    
+    position: absolute;
+    bottom: -20px;
 
 }
 section div.Gustavo h2:hover {
-    background-color: red;
+    background-color: rgb(112, 10, 10);
     height: 70px;
+    transition: 0.5s all ease-in;
+    
+   
+    color: #fff;
 
+}
+p {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 1.7rem;
 }
 
     </style>
@@ -121,7 +198,35 @@ section div.Gustavo h2:hover {
                     </div>     
                 </div>
         </div>
-    </div>
+
+        <div class="Gustavo1">
+            <div class="guts6 colu">
+                <div class="text">
+                </div>                
+            </div>
+
+            <div class="guts-new colu1">
+                <h1>Guts</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus quam, adipisci ipsum explicabo vel quo sit, quibusdam hic ratione molestias voluptas quidem quae voluptatibus cupiditate illo? Expedita, dolore ea.
+                Optio assumenda veritatis repellat vitae incidunt iste consectetur deserunt harum dolores mollitia distinctio sed a quia, illum nostrum unde, molestiae quas voluptatem inventore fuga debitis. Non sed cupiditate natus doloribus?</p>     
+           
+            </div>
+            </div>
+
+            <div class="Gustavo1">
+                <div class="guts7 colu">
+                    <div class="text">
+                    </div>                
+                </div>
+    
+                <div class="guts-new colu1">
+                    <h1>Guts</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod delectus quam, adipisci ipsum explicabo vel quo sit, quibusdam hic ratione molestias voluptas quidem quae voluptatibus cupiditate illo? Expedita, dolore ea.
+                    Optio assumenda veritatis repellat vitae incidunt iste consectetur deserunt harum dolores mollitia distinctio sed a quia, illum nostrum unde, molestiae quas voluptatem inventore fuga debitis. Non sed cupiditate natus doloribus?</p>     
+               
+                </div>            
+                </div>
+
 </section>
     </main>
 </body>

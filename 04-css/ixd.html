@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-Challenge Responsive</title>
+    <style>
+    div.Berserklogo{
+        background: url(img/Berserk_anime_logo.png);
+        height: 216px;
+        width: 390px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+}
+div.Gustavo {
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+    /*height: 300px;/*cambio*/*/
+    border: 2px solid black;
+    text-align: center;
+    display: flex; /*nuevo*/
+    margin: auto;
+    
+}
+/** Nuevo, eliminado div.Gustavo div***/
+.colu {
+   width: calc(25% - 10px);/*nuevo*/
+   display: inline-block;  
+   position: relative;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+div.guts1 {
+    background: url(img/Guts-goldenage.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+
+}
+div.guts2 {
+    background: url(img/black-swordsman.png) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+}
+div.guts3 {
+    background: url(img/Berserk-armor.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+}
+div.guts4 {
+    background: url(img/Elves-island.jpg) no-repeat;
+    height: 300px;    
+    background-size: cover;/*cambio*/
+}
+/*nuevo*/
+.text{
+text-align: center;
+background-color: rgb(0,0,0,0.4);
+width: 100%;
+color: #fff;
+position: absolute;
+bottom: 10px;
+}
+
+
+/*Nuevo Media Queries*/
+/**iPad resolucion 768x1024**/
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    div.Gustavo {
+        width: 90% !important; /*El important es para sobrescribir un estilo ya definido*/    
+        margin: auto; 
+        flex-wrap: wrap; /**El flex wrap wrap es para que cuando alcance el ancho maximop pase al siguiente renglon si no de define siempre va a mostrar los elementos en una sola linea*/    
+    }
+    .colu {
+       width: 45% !important;       
+    }
+}
+
+/**Mobile resolucion menor a  600pxx**/
+@media only screen and (max-width: 599px){
+    div.Gustavo {
+        width: 90% !important; /*El important es para sobrescribir un estilo ya definido*/    
+        margin: auto; 
+        flex-wrap: wrap; /**El flex wrap wrap es para que cuando alcance el ancho maximop pase al siguiente renglon si no de define siempre va a mostrar los elementos en una sola linea*/    
+    }
+    .colu {
+       width: 100% !important;       
+    }
+}
+
+</style>
+</head>
+<body>
+    <main>
+        <section>
+    <div class="Berserklogo"></div>
+    <div class="Gustavo">
+                <div class="guts1 colu">
+                    <div class="text">
+                        Hola soy Juan
+                    </div>                
+                </div>
+
+                <div class="guts2 colu">
+                
+                </div>
+
+                <div class="guts3 colu">
+                
+                </div>
+
+                <div class="guts4 colu">
+                
+                </div>
+        </div>
+    </div>
+</section>
+    </main>
+</body>
+</html>
